@@ -10,19 +10,4 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2"
-  },
-  "devDependencies": {
-    "eslint": "^8.29.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.26.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/raconno/lab1.git"
-  },
-  "keywords": [],
-  "bugs": {
-    "url": "https://github.com/raconno/lab1/issues"
-  },
-  "homepage": "https://github.com/raconno/lab1#readme"
-}
+  }}
