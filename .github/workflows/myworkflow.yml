@@ -1,0 +1,42 @@
+name: myworkflow
+#run-name: ${{ github.actor }} is learning GitHub Actions
+on:
+  push:
+    branches:
+      - main
+jobs:
+  jobs:
+    linting:
+      name: run linter
+      runs-on: ubuntu-latest
+      steps:
+        - name: Check out Git repository
+          uses: actions/checkout@v2
+
+        - name: Set up Node.js
+          uses: actions/setup-node@v1
+          with:
+            node-version: 12
+
+        # ESLint and Prettier must be in `package.json`
+        - name: Install Node.js dependencies
+          run: npm ci
+
+        - name: Code Linting
+          run: npm run lint
+
+#        - name: Run linters
+#          uses: wearerequired/lint-action@v2
+#          with:
+#            eslint: true
+#            prettier: true
+
+#  check-bats-version:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - uses: actions/checkout@v3
+#      - uses: actions/setup-node@v3
+#        with:
+#          node-version: '14'
+#      - run: npm install -g bats
+#      - run: bats -v
