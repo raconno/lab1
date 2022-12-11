@@ -4,7 +4,7 @@
   "description": "Install Node.js\r Create app.js file\r Create Dockerfile\r Creating a package.json file with all needed metadata by: **npm init**\r Install Express web application framework: **npm install express**\r Build docker image: **docker build -t user1name/devops .**\r Push docker image to dockerhub:\r     **docker login**\r     **docker push user1name/devops**\r Run container with cpu and memory constraints: **docker run -m 20m --cpus=0.1 -d -p 80:80 --name node-app devops-l1**",
   "main": "app.js",
   "scripts": {
-     "lint": "npm run eslint ./*.js"
+     "lint": "eslint ./*.js"
   },
   "author": "",
   "license": "ISC",
